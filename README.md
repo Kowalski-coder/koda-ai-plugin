@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://deckyloader.ru/"><img src="https://img.shields.io/badge/Decky_Loader-Plugin-00adff?style=for-the-badge&logo=steamdeck&logoColor=white" alt="Decky Loader" /></a>
   <a href="https://github.com/Kowalski-coder/koda-ai-plugin/releases"><img src="https://img.shields.io/github/v/release/Kowalski-coder/koda-ai-plugin?style=for-the-badge&color=green" alt="GitHub Release" /></a>
+  <a href="https://gitflic.ru/project/viktorkoval1997/koda-ai-plugin"><img src="https://img.shields.io/badge/GitFlic-Mirror-blue?style=for-the-badge" alt="GitFlic Mirror" /></a>
   <a href="https://github.com/Kowalski-coder/koda-ai-plugin/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue?style=for-the-badge" alt="License" /></a>
   <a href="https://archlinux.org/"><img src="https://img.shields.io/badge/Platform-SteamOS_%7C_Arch_Wayland-orange?style=for-the-badge" alt="Platform" /></a>
 </p>
@@ -34,7 +35,7 @@
 
 ## Установка
 
-1. Перейдите в раздел [Releases](https://github.com/Kowalski-coder/koda-ai-plugin/releases) и скачайте актуальный архив **`Koda AI.zip`**.
+1. Скачайте актуальный архив **`Koda AI.zip`** из последнего релиза на [GitHub](https://github.com/Kowalski-coder/koda-ai-plugin/releases) или страницы проекта на [GitFlic](https://gitflic.ru/project/viktorkoval1997/koda-ai-plugin).
 2. Распакуйте архив в директорию плагинов Decky Loader:
    ```bash
    unzip "Koda AI.zip" -d ~/homebrew/plugins/
@@ -100,4 +101,5 @@ npm run build
 ## Автор и лицензия
 
 - **Автор:** [Kowalski-coder](https://github.com/Kowalski-coder)
+- **Зеркало:** [GitFlic](https://gitflic.ru/project/viktorkoval1997/koda-ai-plugin)
 - **Лицензия:** BSD 3-Clause
