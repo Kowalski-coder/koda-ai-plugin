@@ -1,0 +1,11 @@
+{
+  "name": "Koda AI",
+  "author": "Kowalski",
+  "version": "1.0.5",
+  "flags": ["root"],
+  "api_version": 1,
+  "publish": {
+    "tags": ["utility", "ai", "installer", "tools"],
+    "description": "Десктопный клиент Kodacode для Steam Deck с поддержкой режима рабочего стола и Game Mode."
+  }
+}
