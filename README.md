@@ -17,6 +17,10 @@
   <a href="https://archlinux.org/"><img src="https://img.shields.io/badge/Platform-SteamOS_%7C_Arch_Wayland-orange?style=for-the-badge" alt="Platform" /></a>
 </p>
 
+<p align="center">
+  <img src="assets/preview.png" alt="Интерфейс Koda AI в меню Decky QAM" width="800" />
+</p>
+
 ---
 
 ## Возможности
