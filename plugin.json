@@ -1,7 +1,7 @@
 {
   "name": "Koda AI",
   "author": "Kowalski-coder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "flags": ["root"],
   "api_version": 1,
   "publish": {

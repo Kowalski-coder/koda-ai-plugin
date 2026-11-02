@@ -348,12 +348,18 @@ class Plugin:
         p["menu_apps_dir"].mkdir(parents=True, exist_ok=True)
         p["desktop_dir"].mkdir(parents=True, exist_ok=True)
 
-        # 1. Launcher runner script: strips Steam's gameoverlayrenderer.so and enables --no-sandbox
+        # 1. Launcher runner script: strips Steam's gameoverlayrenderer.so, handles FUSE 2 fallback, and enables --no-sandbox
         runner_content = (
             "#!/usr/bin/env bash\n"
             "# Clear Steam LD_PRELOAD overlay hooks which crash Chromium GPU process\n"
-            "unset LD_PRELOAD\n"
-            f'exec "{p["appimage"]}" --no-sandbox "$@"\n'
+            "unset LD_PRELOAD\n\n"
+            f'APPIMAGE="{p["appimage"]}"\n'
+            "EXTRA_ARGS=()\n"
+            "# Fallback to extract-and-run if FUSE 2 (libfuse.so.2) is not installed\n"
+            "if ! ldconfig -p 2>/dev/null | grep -q 'libfuse\\.so\\.2' && [ ! -f /usr/lib/libfuse.so.2 ] && [ ! -f /usr/lib64/libfuse.so.2 ]; then\n"
+            "    EXTRA_ARGS+=(--appimage-extract-and-run)\n"
+            "fi\n\n"
+            'exec "$APPIMAGE" "${EXTRA_ARGS[@]}" --no-sandbox "$@"\n'
         )
         with open(p["run_script"], "w", encoding="utf-8") as f:
             f.write(runner_content)
@@ -1054,7 +1060,13 @@ class Plugin:
                 return set_ids
 
             target = str(p["run_script"]) if p["run_script"].is_file() else str(p["appimage"])
-            cmd = [target] if p["run_script"].is_file() else [target, "--no-sandbox"]
+            if p["run_script"].is_file():
+                cmd = [target]
+            else:
+                cmd = [target]
+                if not Path("/usr/lib/libfuse.so.2").exists() and not Path("/usr/lib64/libfuse.so.2").exists():
+                    cmd.append("--appimage-extract-and-run")
+                cmd.append("--no-sandbox")
 
             proc = subprocess.Popen(
                 cmd,

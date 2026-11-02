@@ -1,6 +1,6 @@
 {
   "name": "koda-ai",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Decky Loader plugin for installing and managing Koda AI Desktop",
   "scripts": {
     "build": "shx rm -rf dist && rollup -c && node -e \"const fs = require('fs'); let c = fs.readFileSync('dist/index.js', 'utf8'); if (c.startsWith('var ')) { fs.writeFileSync('dist/index.js', c.replace(/^var \\w+ =\\s*/, '')); }\"",
