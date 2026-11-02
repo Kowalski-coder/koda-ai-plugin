@@ -9,11 +9,18 @@
   Управление, запуск и интеграция десктопного клиента <b>Kodacode</b> в Game Mode и Desktop Mode со встроенными скиллами для SteamOS.
 </p>
 
+<p align="center">
+  <a href="https://deckyloader.ru/"><img src="https://img.shields.io/badge/Decky_Loader-Plugin-00adff?style=for-the-badge&logo=steamdeck&logoColor=white" alt="Decky Loader" /></a>
+  <a href="https://github.com/Kowalski-coder/koda-ai-plugin/releases"><img src="https://img.shields.io/github/v/release/Kowalski-coder/koda-ai-plugin?style=for-the-badge&color=green" alt="GitHub Release" /></a>
+  <a href="https://github.com/Kowalski-coder/koda-ai-plugin/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue?style=for-the-badge" alt="License" /></a>
+  <a href="https://archlinux.org/"><img src="https://img.shields.io/badge/Platform-SteamOS_%7C_Arch_Wayland-orange?style=for-the-badge" alt="Platform" /></a>
+</p>
+
 ---
 
 ## Возможности
 
-- 🚀 **Установка и запуск в один клик:** Загрузка актуального AppImage Koda Desktop, интеграция в меню приложений KDE и библиотека Steam (Game Mode).
+- 🚀 **Установка и запуск в один клик:** Загрузка актуального AppImage Koda Desktop, интеграция в меню приложений KDE и библиотеку Steam (Game Mode).
 - 🎮 **Поддержка Game Mode:** Автоматическое создание ярлыка в `shortcuts.vdf` с фирменной иконкой и запуск прямо из оверлея Decky QAM.
 - 📊 **Мониторинг квот и лимитов:** Отображение текущего тарифа (Free / Pro) и полос оставшихся вызовов моделей (`Koda base`, `Koda PRO`) с корректным временем сброса по местному часовому поясу.
 - 🧩 **Встроенные скиллы для SteamOS:**
@@ -21,7 +28,7 @@
   - **Proton & PortProton Troubleshooter:** префиксы Wine/Proton, диагностика игр, запуск Windows-приложений.
   - **KDE Plasma Deck:** конфигурация рабочего стола, энергосбережение, сочетания клавиш.
   - **Decky Plugin Dev:** документация и инструментарий для разработки плагинов под Steam Deck.
-- 🎨 **Нативный интерфейс Decky:** Монохромная иконка боковой панели QAM, плавный прогресс-бар установки и диалог подтверждения удаления.
+- 🎨 **Нативный интерфейс Decky:** Монохромная иконка боковой панели QAM, плавный прогресс-бар установки и диалог подтверждения удаления с поддержкой управления с геймпада.
 
 ---
 
@@ -74,7 +81,23 @@ npm run build
 
 ---
 
-## Лицензия
+## ☕ Support the Project / Поддержка проекта
 
-Распространяется под лицензией BSD 3-Clause / MIT.
-Автор: **Kowalski**
+Если вам нравится плагин **Koda AI** и вы хотите поддержать дальнейшую разработку и обновления:
+
+<p align="center">
+  <a href="https://boosty.to/kowalski1997/donate">
+    <img src="https://img.shields.io/badge/Support_Author-Boosty-orange?style=for-the-badge&logo=boosty&logoColor=white" alt="Support on Boosty" height="42">
+  </a>
+</p>
+
+<p align="center">
+  👉 <b><a href="https://boosty.to/kowalski1997/donate">Поддержать автора на Boosty (Donate)</a></b> 🧡
+</p>
+
+---
+
+## Автор и лицензия
+
+- **Автор:** [Kowalski-coder](https://github.com/Kowalski-coder)
+- **Лицензия:** BSD 3-Clause
